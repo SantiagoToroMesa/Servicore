@@ -1,1 +1,15 @@
-<p>sidebar-item works!</p>
+@if(!item.children) {
+  <a [routerLink]="item.route">
+    {{item.label}}
+  </a>
+}
+@if(item.children) {
+  <div (click)="toggle()">
+    {{item.label}}
+  </div>
+}
+@if(isOpen()){
+  @for (child of item.children; track child.label) {
+    <app-sidebar-item [item]="child"></app-sidebar-item>
+  }
+}
