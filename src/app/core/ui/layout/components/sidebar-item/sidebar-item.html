@@ -1,3 +1,4 @@
+<div class="">
 @if(!item.children) {
   <a [routerLink]="item.route">
     {{item.label}}
@@ -8,8 +9,11 @@
     {{item.label}}
   </div>
 }
-@if(isOpen()){
+<div class="grid grid-cols-1">
+  @if(isOpen()){
   @for (child of item.children; track child.label) {
     <app-sidebar-item [item]="child"></app-sidebar-item>
   }
 }
+</div>
+</div>

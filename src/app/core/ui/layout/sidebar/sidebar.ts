@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { ItemSidebar } from '../../../../shared/models/sidebar-item.model';
+import { SidebarItem } from "../components/sidebar-item/sidebar-item";
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
+  imports: [SidebarItem],
   templateUrl: './sidebar.html',
   styleUrl: './sidebar.css',
 })

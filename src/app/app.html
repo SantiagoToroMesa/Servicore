@@ -1,1 +1,14 @@
-<div class="grid h-screen grid-cols-[16rem_1fr] grid-rows"></div>
+<div class="grid h-screen grid-cols-[16rem_1fr] grid-rows">
+  <header class="col-span-2 grid grid-cols-subgrid row-start-1">
+
+    <app-topbar></app-topbar>
+  </header>
+  <aside class="col-start-1 row-start-1 row-end-2 border-r border-blue-950 bg-blue-950 flex flex-col gap-6 p-6">
+    <app-brand-logo></app-brand-logo>
+    <app-sidebar></app-sidebar>
+  </aside>
+  <main class="col-start-2 row-start-2 overflow-auto p-6 bg-gray-50">
+    <router-outlet>
+    </router-outlet>
+  </main>
+</div>
